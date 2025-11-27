@@ -7,7 +7,7 @@ interface FeatureItemProps {
 }
 
 const FeatureItem = ({ icon, title, children }: FeatureItemProps) => (
-  <div className="flex gap-4 items-start">
+  <div className="flex gap-4 items-start p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/8 transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
     <div className="p-3 rounded-xl bg-accent/10 border border-accent/20 flex-shrink-0">
       <div className="w-6 h-6 text-accent">{icon}</div>
     </div>

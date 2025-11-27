@@ -7,7 +7,7 @@ interface PublicationCardProps {
 
 export default function PublicationCard({ title, authors, venue, link }: PublicationCardProps) {
   return (
-    <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl hover:bg-white/8 transition-colors border border-white/10">
+    <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl hover:bg-white/8 transition-all duration-300 transform hover:-translate-y-2 border border-white/10 cursor-pointer">
       <div className="flex justify-between items-start gap-4">
         <div>
           <div className="font-semibold text-foreground">{title}</div>

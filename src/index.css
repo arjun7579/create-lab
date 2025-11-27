@@ -47,10 +47,15 @@ All colors MUST be HSL.
 
 html, body {
   height: 100%;
+  cursor: none;
 }
 
 body {
   @apply font-sans antialiased;
+}
+
+* {
+  cursor: none !important;
 }
 
 @layer base {

@@ -1,18 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { NavLink as RouterNavLink, useLocation } from "react-router-dom";
 import { Github } from "lucide-react";
 
-const NavItem = ({ to, children }: { to: string; children: React.ReactNode }) => (
-  <NavLink
-    to={to}
-    className={({ isActive }) =>
-      `px-3 py-2 rounded-md text-sm transition-colors ${
-        isActive ? "bg-white/10" : "hover:bg-white/5"
-      }`
-    }
-  >
-    {children}
-  </NavLink>
-);
+const NavItem = ({ to, children }: { to: string; children: React.ReactNode }) => {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+
+  return (
+    <RouterNavLink
+      to={to}
+      className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:text-accent hover:bg-white/5 group ${
+        isActive ? "text-accent" : ""
+      }`}
+    >
+      {children}
+      <span
+        className={`absolute bottom-0 left-0 w-full h-0.5 bg-accent transition-transform duration-300 origin-left ${
+          isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+        }`}
+      />
+    </RouterNavLink>
+  );
+};
 
 export default function Navbar() {
   return (
@@ -22,7 +30,7 @@ export default function Navbar() {
           CL
         </div>
         <div>
-          <div className="text-lg font-bold tracking-widest">C.R.E.A.T.E LAB</div>
+          <div className="text-lg font-bold tracking-widest">C.R.E.A.T.E Lab</div>
           <div className="text-xs text-foreground/60">
             Centre for Resilient Environments & Autonomous Technologies
           </div>

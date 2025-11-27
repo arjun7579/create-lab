@@ -36,7 +36,7 @@ const projects = [
 export default function Projects() {
   return (
     <div className="max-w-6xl mx-auto py-16 px-6">
-      <h2 className="text-4xl font-bold">Research Projects</h2>
+      <h2 className="text-4xl font-bold">Projects</h2>
       <p className="mt-4 text-lg text-foreground/80">
         Explore our ongoing and completed research initiatives spanning autonomous systems, IoT, and
         resilient infrastructure.

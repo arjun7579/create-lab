@@ -38,7 +38,7 @@ export default function Publications() {
     <div className="max-w-6xl mx-auto py-16 px-6">
       <h2 className="text-4xl font-bold">Publications</h2>
       <p className="mt-4 text-lg text-foreground/80">
-        Research papers and publications from C.R.E.A.T.E Lab members.
+        Papers and publications from C.R.E.A.T.E Lab members.
       </p>
       <div className="mt-10 grid gap-6">
         {publications.map((pub, i) => (
